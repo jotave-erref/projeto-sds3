@@ -27,7 +27,6 @@ public class Seller {
 	}
 
 	public Seller(Long id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -50,22 +49,5 @@ public class Seller {
 
 	public List<Sale> getSale() {
 		return sale;
-	}
-	
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Seller other = (Seller) obj;
-		return Objects.equals(id, other.id);
 	}
 }
